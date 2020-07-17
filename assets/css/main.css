@@ -23,53 +23,62 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	/* z-index: -1; */
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-body {
-	line-height: 1;
+	/* Adding in NAV Component */
+#nav {
+text-align:center;
+
+  	background-color: #333; /* Black background color */
+  	position: fixed; /* Make it stick/fixed */
+	top: 0; /* Stay on top */
+	text-align: center;
+  	width: 100%; /* Full width */
+  	transition: top 0.3s; /* Transition effect when sliding down (and up) */
+   	z-index: 1000000;
 }
+#nav ul {
+display:inline-block;
+list-style:none; 
 
-ol, ul {
-	list-style: none;
+	width:750px;
+	margin:0 auto;
+	position: relative;
 }
-
-blockquote, q {
-	quotes: none;
+* html #nav ul { /* Target IE6 */
+display:inline;
 }
-
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+*+html #nav ul { /* Target IE7 */
+display:inline;
 }
+#nav li {
+/* display:inline; */
 
-body {
-	-webkit-text-size-adjust: none;
+    float: left;
+	text-align:center; 
+	justify-content: center;
 }
+#nav a {
+float:left;
+text-decoration:none; 
+/* padding:0 30px; variable width */
 
-mark {
-	background-color: transparent;
-	color: inherit;
+  display: block;
+  color: white;
+  text-align: center;
+
+  padding: 20px;
+  text-decoration: none;
 }
-
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input, select, textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
+#nav a:hover {
+  background-color: rgb(168, 187, 219);
+  color: black;
 }
 
 /* Basic */
